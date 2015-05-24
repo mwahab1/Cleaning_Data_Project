@@ -9,7 +9,7 @@ This repository contains the following:
 The raw original data (and descriptions of the data) for  this analysis  are avilable at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
 
 
-#R Script: Dependencies
+##R Script: Dependencies
 Dependencies/Pre-requisites for running the script:
 
 * The run_analysis.R file is the only script required to repeatably perform the same summarization. 
@@ -30,7 +30,7 @@ Dependencies/Pre-requisites for running the script:
 
 
 
-# R Script -  Details
+## R Script -  Details
 The script does the following :
 *  Requires/loads  pre-requisite R package
 *  Verifies that the raw data files exist in the current working directory along with the subdirectories for train and test datasets.
@@ -53,16 +53,16 @@ The script does the following :
 *  This final tiday dataset is then written out to a text file called Tidy_Samung.txt
 
 
-#Reading Tidy Data into R
-* Option if tidy data file(Tidy_Samsung.txt) is downloaded to current working directory
-      * df_readdata_txt<- read.table("Tidy_Samsung.txt", header=TRUE)
-* Option for reading data file from the submission URL directly:
-      * data_in <- read.table(
-      "https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt",
-      header=TRUE)
-      
-      
-https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt
+
+##Reading Tidy Data into R after downloading file locally to current working directory of R
+
+df_data <- read.table("Tidy_Samsung.txt", header=TRUE)
+
+##Reading  data file from the submission URL directly:
+
+df_data  <- read.table(
+"https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt",
+header=TRUE)
 
 
 
