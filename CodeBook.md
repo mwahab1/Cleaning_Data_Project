@@ -20,6 +20,8 @@ The raw data for this is available at: http://archive.ics.uci.edu/ml/datasets/Hu
     * SITTING
     * STANDING
     * LAYING
-    
+* TimeBodyAccelerationmeanXAxis (Mean Time Body Acceleration - X Axis)
+* TimeBodyAccelerationmeanYAxis (Mean Time Body Acceleration - Y Axis)
+* 
 
 
