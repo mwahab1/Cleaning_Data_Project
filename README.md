@@ -25,7 +25,8 @@ Dependencies/Pre-requisites for running the script:
       *     /train/X_train.txt
       *     /train/y_train.txt
       *     /train/subject_train.txt
-      For descriptions of the data in these files, refer to the readme in the zipfile.  
+      <b> The test and train subdirectories as assumed to exist in the current working directory and have the same strcuture as the original dataset. Interial Signals folder is not required.  </b>
+For descriptions of the data in these files, refer to the readme in the zipfile.  
 
 <em>The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.</em>
 
