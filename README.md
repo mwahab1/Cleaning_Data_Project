@@ -49,7 +49,7 @@ The script does the following :
 *  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
 *  Combine the Train and Test data frame into one comprehensive data frame
 *  Replaces the Acitivy IDs (1,2..6) in the combined data frame using text descriptors from activity_lables.txt file(WALKING, WALKING_UPSTAIRS etc). In this process , it also converts the activity column into a factor.
-*  The column names of this dataset are then replaced with more descriptive column names.
+*  The column names of this dataset are then replaced with more descriptive column names. (Note that the requirement to make all column names lower case is not mandatory according to lecture notes last slide of (http://jtleek.com/modules/03_GettingData/04_01_editingTextVariables/#1). IN this case...the column names woul have been very long and confusing without some capitalization. 
 *  Finally a mean of each variable is calculated for each activity and each subject. 
 *  This final tiday dataset is then written out to a text file called Tidy_Samung.txt
 
