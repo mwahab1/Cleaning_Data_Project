@@ -6,8 +6,9 @@ This repository contains the following:
 * Code Book detailing the Dataset created by the run_analysis.R script
 
 
-The raw original data (and descriptions of the data) for  this analysis  are avilable at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
-
+The raw original data (and descriptions of the data) for  this analysis  are avilable at the following locations: 
+* http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
+* https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ##R Script: Dependencies
 Dependencies/Pre-requisites for running the script:
