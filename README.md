@@ -26,7 +26,7 @@ Dependencies/Pre-requisites for running the script:
       *     /train/subject_train.txt
       For descriptions of the data in these files, refer to the readme in the zipfile.  
 
-The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.
+<em>The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.</em>
 
 
 
@@ -36,10 +36,10 @@ The script does the following :
 *  Verifies that the raw data files exist in the current working directory along with the subdirectories for train and test datasets.
 *  Load the raw data into R Data Frames:
       * Train and Test measurement files
-      * subject file for Train and Test Data (which identifies the  ID of the subject in the observation)
-      * Activity file for Train and Test Data (which identify the acticity the subject performed while the observations were measured)
-      * Activity Label file (Mapping Activity Label like Walking /Laying to the factor values included in measurement files
-      * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561)
+      * subject files for Train and Test Data (which identifies the  ID of the subject in the observation)
+      * Activity files for Train and Test Data (which identify the activity the subject performed while the observations were measured)
+      * Activity Label file (Mapping Activity Labels like Walking /Laying to the factor values included in measurement files)
+      * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561))
       
 *  In the Train and Test datasets, remove column that do not are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std 
 *  Combine the subject, activity and measurements columns to create one Train Dataset as an R data frame.
