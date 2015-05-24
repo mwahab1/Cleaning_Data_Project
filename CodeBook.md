@@ -1,14 +1,29 @@
 # CodeBook for Cleaning Data Project
 
+This code book has the following sections:
+* Background
+* Source of raw data and desciption of data collection methods   
+* Transformation performed on raw data to obtain the data set in the Tidy dataset
+* Variables in data set 
+
 ###Background
 
 The Tidy data file created from the raw data follows some of the precepts laid down in the following sources:
 * Hadley Wickham (http://vita.had.co.nz/papers/tidy-data.pdf)
 * Jeff Leek (https://github.com/jtleek/datasharing)
 
-### Raw Data
-The raw data for this is available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+### Source of Raw Data 
 
+The raw data for this is available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+and https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+These links also provide  descrptions of underlying data capture and processing.  
+
+### Transformtions Performed on Raw Data
+* The raw data in zipfile was downloaded and unzipped using MS Windows Extraction.
+* The files were then loaded into R and a Tidy DataSet created using the run_analysis.R script in this repository
+
+Readme.md has details on the run_analysis.R script.
 
 
 ###Data /Variables in Tidy Data file.
@@ -111,8 +126,5 @@ a) they are numeric in the range of -1 to +1  b) they are averages from the raw 
 * angleofYaxisandGravityMean (Mean Angle of Y Axis and Gravity Mean)
 * angleofZaxisandGravityMean (Mean Angle of Z Axis and Gravity Mean)
 
-
-* 
-* 
 
  
