@@ -41,7 +41,9 @@ The script does the following :
       * Activity Label file (Mapping Activity Labels like Walking /Laying to the factor values included in measurement files)
       * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561))
       
-*  In the Train and Test datasets, remove column that do not are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std 
+*  In the Train and Test datasets, remove columns that do not are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std.
+<em> Please note that according to the Community TA (David Hood - many thanks)  posting in the forum at (https://class.coursera.org/getdata-014/forum/thread?thread_id=31#comment-519) the actual list of columns chosen is not a marking criterion. In my opinion, not knowing the underlying data, it was best to chose all data columns that had mean/std/Mean in their column names, including some that were meanFreq etc.</em>
+
 *  Combine the subject, activity and measurements columns to create one Train Dataset as an R data frame.
 *  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
 *  Combine the Train and Test data frame into one comprehensive data frame
@@ -49,6 +51,7 @@ The script does the following :
 *  The column names of this dataset are then replaced with more descriptive column names.
 *  Finally a mean of each variable is calculated for each activity and each subject. 
 *  This final tiday dataset is then written out to a text file called Tidy_Samung.txt
+
 
 #Reading Tidy Data into R
 df_readdata_txt<- read.table("Tidy_Samsung.txt", header=TRUE)
