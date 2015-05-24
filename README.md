@@ -62,10 +62,9 @@ df_data <- read.table("Tidy_Samsung.txt", header=TRUE)
 
 * <b>Option 2: Reading  data file from the submission URL directly:</b>
 
-df_data  <- read.table(
-"https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt",
-header=TRUE)
-
+df_data <- read.table(
+      "https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/bac7b720025311e5aa668f13681ea683.txt",
+      header=TRUE)
 
 
 
