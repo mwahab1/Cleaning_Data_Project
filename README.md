@@ -26,8 +26,9 @@ Dependencies/Pre-requisites for running the script:
       *     /train/subject_train.txt
       For descriptions of the data in these files, refer to the readme in the zipfile   
 
-
 The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.
+
+df_readdata_txt<- read.table("Tidy_Samsung.txt", header=TRUE)
 
 
 The script does the following :
@@ -45,7 +46,12 @@ The script does the following :
 *  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
 *  
 *  Combine the Train and Test data frame into one comprehensive data frame
-*  Replaces the Acitivy IDs (1,2..6) in the combined data frame using text descriptors from activity_lables.txt file(WALKING, WALKING_UPSTAIRS etc. In this process , it also converts the activity column into a factor.
+*  Replaces the Acitivy IDs (1,2..6) in the combined data frame using text descriptors from activity_lables.txt file(WALKING, WALKING_UPSTAIRS etc). In this process , it also converts the activity column into a factor.
+*  The column names of this dataset are then replaced with more descriptive column names.
+*  Finally a mean of each variable is calculated for each activity and each subject. 
+*  This final tiday dataset is then written out to a text file called Tidy_Samung.txt
+
+To read/review this tiday data in R:
 
 
 
