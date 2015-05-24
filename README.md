@@ -54,7 +54,15 @@ The script does the following :
 
 
 #Reading Tidy Data into R
-df_readdata_txt<- read.table("Tidy_Samsung.txt", header=TRUE)
+* Option if tidy data file(Tidy_Samsung.txt) is downloaded to current working directory
+      * df_readdata_txt<- read.table("Tidy_Samsung.txt", header=TRUE)
+* Option for reading data file from the submission URL directly:
+      * data_in <- read.table(
+      "https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt",
+      header=TRUE)
+      
+      
+https://s3.amazonaws.com/coursera-uploads/user-e40aa5dc398627b4ba751caf/973501/asst-3/22e3349001fc11e5aa668f13681ea683.txt
 
 
 
