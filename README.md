@@ -26,10 +26,21 @@ Dependencies/Pre-requisites for running the script:
       *     /train/subject_train.txt
       For descriptions of the data in these files, refer to the readme in the zipfile   
 
-Other
+
+The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.
+
 
 The script does the following :
 *  Requires/loads  pre-requisite R package
+*  Verifies that the raw data files exist in the current working directory along with the subdirectories for train and test datasets.
+*  Load the raw data into R Data Frames:
+      * Train and Test measurement files
+      * subject file for Train and Test Data (which identifies the  ID of the subject in the observation)
+      * Activity file for Train and Test Data (which identify the acticity the subject performed while the observations were measured)
+      * Activity Label file (Mapping Activity Label like Walking /Laying to the factor values included in measurement files
+      * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561)
+      * 
+*  
 
 
 
