@@ -27,8 +27,9 @@ Dependencies/Pre-requisites for running the script:
       *     /train/subject_train.txt
       
    <p> <b> The test and train subdirectories as assumed to exist in the current working directory and have the same strcuture as the original dataset. Interial Signals folder is not required.  </b>
+<p>
 For descriptions of the data in these files, refer to the readme in the zipfile.  
-
+<p>
 <em>The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.</em>
 
 
@@ -45,8 +46,8 @@ The script does the following :
       * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561))
       
 *  In the Train and Test datasets, remove columns that are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std.
-<b> Please note that according to the Community TA (David Hood - many thanks)  posting in the forum at (https://class.coursera.org/getdata-014/forum/thread?thread_id=31#comment-519) the actual list of columns chosen is not a marking criterion. Not knowing the underlying data, it was best to chose all data columns that had mean/std/Mean in their column names, including some that were meanFreq etc. This minimises the chances that some required columns are dropped accidentally- resulting in adverse data loss</b>
-
+<p><b> Please note that according to the Community TA (David Hood - many thanks)  posting in the forum at (https://class.coursera.org/getdata-014/forum/thread?thread_id=31#comment-519) the actual list of columns chosen is not a marking criterion. Not knowing the underlying data, it was best to chose all data columns that had mean/std/Mean in their column names, including some that were meanFreq etc. This minimises the chances that some required columns are dropped accidentally- resulting in adverse data loss</b>
+<p>
 *  Combine the subject, activity and measurements columns to create one Train Dataset as an R data frame.
 *  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
 *  Combine the Train and Test data frame into one comprehensive data frame
