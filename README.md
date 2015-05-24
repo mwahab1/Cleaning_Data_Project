@@ -39,8 +39,15 @@ The script does the following :
       * Activity file for Train and Test Data (which identify the acticity the subject performed while the observations were measured)
       * Activity Label file (Mapping Activity Label like Walking /Laying to the factor values included in measurement files
       * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561)
-      * 
+      
+*  In the Train and Test datasets, remove column that do not are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std 
+*  Combine the subject, activity and measurements columns to create one Train Dataset as an R data frame.
+*  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
 *  
+*  Combine the Train and Test data frame into one comprehensive data frame
+*  Replaces the Acitivy IDs (1,2..6) in the combined data frame using text descriptors from activity_lables.txt file(WALKING, WALKING_UPSTAIRS etc. In this process , it also converts the activity column into a factor.
+
+
 
 
 
