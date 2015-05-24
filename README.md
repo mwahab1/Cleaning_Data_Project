@@ -8,7 +8,7 @@ This repository contains the following:
 
 The raw original data (and descirptions of the data) for  this analysis  are avilable at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
 
-
+#Z
 R Script:
 Dependencies/Pre-requisites for running the script:
 
