@@ -15,7 +15,7 @@ Dependencies/Pre-requisites for running the script:
 * The run_analysis.R file is the only script required to repeatably perform the same summarization. 
 * The script requires the following libraries:
     * dplyr
-* Assumes the data zip file has been unzipped and the following files exist in the current directory :
+* Script assumes the data zip file has been unzipped and the following files exist in the current directory :
       *     features.txt            
       *     activity_labels.txt     
       *     /test/X_test.txt        
@@ -24,7 +24,7 @@ Dependencies/Pre-requisites for running the script:
       *     /train/X_train.txt
       *     /train/y_train.txt
       *     /train/subject_train.txt
-      For descriptions of the data in these files, refer to the readme in the zipfile   
+      For descriptions of the data in these files, refer to the readme in the zipfile.  
 
 The run_analysis.R file was created and tested using R Version 3.2 (32 bit) on a Windows 7 desktop.
 
