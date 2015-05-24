@@ -110,99 +110,36 @@ df_dataset <- rbind(df_train, df_test)
 
 df_dataset[,2] <- factor(df_dataset$activity,labels=df_activities[,2])
 
-# Create a new list of descriptive column names
+# Create a new list of descriptive column names for the features 
+new_column_names<- colnames(df_dataset)
+
+c2 <- gsub("^t","Time",mean_std_list[,2]) #replace names  starting with "t" with "Time"
+c2 <- gsub("angle", "Angle", c2)
+c2 <- gsub("BodyBody", "Body", c2) #remove duplicate BodyBody . 
+
+c2 <- gsub("Freq", "Frequency", c2) #this needs to happen before replacing the fBody
+c2 <- gsub("fBody","FrequencyBody",c2)
+c2 <- gsub("tBody", "TimeBody", c2)
+
+c2 <- gsub("X","Xaxis", c2 )
+c2 <- gsub("Y","Yaxis", c2)
+c2 <- gsub("Z","Zaxis", c2)
 
 
-new_column_names<-c(
-      "subject"
-      ,"activity"
-      ,"TimeBodyAccelerationmeanXAxis"
-      ,"TimeBodyAccelerationmeanYAxis"
-      ,"TimeBodyAccelerationmeanZAxis"
-      ,"TimeBodyAccelerationstandarddeviationXAxis"
-      ,"TimeBodyAccelerationstandarddeviationYAxis"
-      ,"TimeBodyAccelerationstandarddeviationZAxis"
-      ,"TimeGravityAccelerationmeanXAxis"
-      ,"TimeGravityAccelerationmeanYAxis"
-      ,"TimeGravityAccelerationmeanZAxis"
-      ,"TimeGravityAccelerationstandarddeviationXAxis"
-      ,"TimeGravityAccelerationstandarddeviationYAxis"
-      ,"TimeGravityAccelerationstandarddeviationZAxis"
-      ,"TimeBodyAccelerationJerkmeanXAxis"
-      ,"TimeBodyAccelerationJerkmeanYAxis"
-      ,"TimeBodyAccelerationJerkmeanZAxis"
-      ,"TimeBodyAccelerationJerkstandarddeviationXAxis"
-      ,"TimeBodyAccelerationJerkstandarddeviationYAxis"
-      ,"TimeBodyAccelerationJerkstandarddeviationZAxis"
-      ,"TimeBodyGyroscopemeanXAxis"
-      ,"TimeBodyGyroscopemeanYAxis"
-      ,"TimeBodyGyroscopemeanZAxis"
-      ,"TimeBodyGyroscopestandarddeviationXAxis"
-      ,"TimeBodyGyroscopestandarddeviationYAxis"
-      ,"TimeBodyGyroscopestandarddeviationZAxis"
-      ,"TimeBodyGyroscopeJerkmeanXAxis"
-      ,"TimeBodyGyroscopeJerkmeanYAxis"
-      ,"TimeBodyGyroscopeJerkmeanZAxis"
-      ,"TimeBodyGyroscopeJerkstandarddeviationXAxis"
-      ,"TimeBodyGyroscopeJerkstandarddeviationYAxis"
-      ,"TimeBodyGyroscopeJerkstandarddeviationZAxis"
-      ,"TimeBodyAccelerationMagnitudemean"
-      ,"TimeBodyAccelerationMagnitudestandarddeviation"
-      ,"TimeGravityAccelerationMagnitudemean"
-      ,"TimeGravityAccelerationMagnitudestandarddeviation"
-      ,"TimeBodyAccelerationJerkMagnitudemean"
-      ,"TimeBodyAccelerationJerkMagnitudestandarddeviation"
-      ,"TimeBodyGyroscopeMagnitudemean"
-      ,"TimeBodyGyroscopeMagnitudestandarddeviation"
-      ,"TimeBodyGyroscopeJerkMagnitudemean"
-      ,"TimeBodyGyroscopeJerkMagnitudestandarddeviation"
-      ,"FrequencyDomainBodyAccelerationmeanXAxis"
-      ,"FrequencyDomainBodyAccelerationmeanYAxis"
-      ,"FrequencyDomainBodyAccelerationmeanZAxis"
-      ,"FrequencyDomainBodyAccelerationstandarddeviationXAxis"
-      ,"FrequencyDomainBodyAccelerationstandarddeviationYAxis"
-      ,"FrequencyDomainBodyAccelerationstandarddeviationZAxis"
-      ,"FrequencyDomainBodyAccelerationmeanFrequencyXAxis"
-      ,"FrequencyDomainBodyAccelerationmeanFrequencyYAxis"
-      ,"FrequencyDomainBodyAccelerationmeanFrequencyZAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanXAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanYAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanZAxis"
-      ,"FrequencyDomainBodyAccelerationJerkstandarddeviationXAxis"
-      ,"FrequencyDomainBodyAccelerationJerkstandarddeviationYAxis"
-      ,"FrequencyDomainBodyAccelerationJerkstandarddeviationZAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanFrequencyXAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanFrequencyYAxis"
-      ,"FrequencyDomainBodyAccelerationJerkmeanFrequencyZAxis"
-      ,"FrequencyDomainBodyGyroscopemeanXAxis"
-      ,"FrequencyDomainBodyGyroscopemeanYAxis"
-      ,"FrequencyDomainBodyGyroscopemeanZAxis"
-      ,"FrequencyDomainBodyGyroscopestandarddeviationXAxis"
-      ,"FrequencyDomainBodyGyroscopestandarddeviationYAxis"
-      ,"FrequencyDomainBodyGyroscopestandarddeviationZAxis"
-      ,"FrequencyDomainBodyGyroscopemeanFrequencyXAxis"
-      ,"FrequencyDomainBodyGyroscopemeanFrequencyYAxis"
-      ,"FrequencyDomainBodyGyroscopemeanFrequencyZAxis"
-      ,"FrequencyDomainBodyAccelerationMagnitudemean"
-      ,"FrequencyDomainBodyAccelerationMagnitudestandarddeviation"
-      ,"FrequencyDomainBodyAccelerationMagnitudemeanFrequency"
-      ,"FrequencyDomainBodyAccelerationJerkMagnitudemean"
-      ,"FrequencyDomainBodyAccelerationJerkMagnitudestandarddeviation"
-      ,"FrequencyDomainBodyAccelerationJerkMagnitudemeanFrequency"
-      ,"FrequencyDomainBodyGyroscopeMagnitudemean"
-      ,"FrequencyDomainBodyGyroscopeMagnitudestandarddeviation"
-      ,"FrequencyDomainBodyGyroscopeMagnitudemeanFrequency"
-      ,"FrequencyDomainBodyGyroscopeJerkMagnitudemean"
-      ,"FrequencyDomainBodyGyroscopeJerkMagnitudestandarddeviation"
-      ,"FrequencyDomainBodyGyroscopeJerkMagnitudemeanFrequency"
-      ,"angleofTimeBodyAccelerationMeanandGravityMean"
-      ,"angleofTimeBodyAccelerationJerkMeanandGravityMean"
-      ,"angleofTimeBodyGyroscopeMeanandGravityMean"
-      ,"angleofTimeBodyGyroscopeJerkMeanandGravityMean"
-      ,"angleofXaxisandGravityMean"
-      ,"angleofYaxisandGravityMean"
-      ,"angleofZaxisandGravityMean"
-)
+c2 <- gsub("Acc","Acceleration", c2)
+c2 <- gsub("Gyro","Gyroscope", c2)
+c2 <- gsub("Mag","Magnitude", c2)
+
+c2 <- gsub("-","", c2)
+c2 <- gsub("\\(|\\)", "", c2) 
+c2 <- gsub("gravity","Gravity", c2)
+
+c2 <- gsub("std","StandardDeviation",c2)
+
+c2 <- gsub(",","",c2) #strip out commas
+
+new_column_names[3:88]<-c2 #replace the columan names of all columns except subject and activity
+
 
 # Rename the columns in out dataset using the new list
 colnames(df_dataset) <- new_column_names
