@@ -9,7 +9,6 @@ This repository contains the following:
 The raw original data (and descirptions of the data) for  this analysis  are avilable at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones  
 
 
-
 R Script:
 Dependencies/Pre-requisites for running the script:
 
@@ -17,15 +16,15 @@ Dependencies/Pre-requisites for running the script:
 * The script requires the following libraries:
     * dplyr
 * Assumes the data zip file has been unzipped and the following files exist in the current directory :
-      *     features.txt            ---Names of Feature Columns that have been recorded in the original raw data  
-      *     activity_labels.txt     ---Activity Lables (Walking/Laying etc
-      *     /test/X_test.txt        ---
+      *     features.txt            
+      *     activity_labels.txt     
+      *     /test/X_test.txt        
       *     /test/y_test.txt
       *     /test/subject_test.txt
       *     /train/X_train.txt
       *     /train/y_train.txt
       *     /train/subject_train.txt
-      *     
+      For descriptions of the data in these files, refer to the readme in the zipfile   
 
 Other
 
