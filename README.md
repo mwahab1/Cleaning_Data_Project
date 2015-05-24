@@ -41,8 +41,8 @@ The script does the following :
       * Activity Label file (Mapping Activity Labels like Walking /Laying to the factor values included in measurement files)
       * Features file (Listing feature column names of the columns in the measurement file (Columns 3 to 561))
       
-*  In the Train and Test datasets, remove columns that do not are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std.
-<u> Please note that according to the Community TA (David Hood - many thanks)  posting in the forum at (https://class.coursera.org/getdata-014/forum/thread?thread_id=31#comment-519) the actual list of columns chosen is not a marking criterion. In my opinion, not knowing the underlying data, it was best to chose all data columns that had mean/std/Mean in their column names, including some that were meanFreq etc.</u>
+*  In the Train and Test datasets, remove columns that are not indicated as means or standarddeviation observations. For this, only observation columns that have names with one of the following strings are included : mean,Mean,std.
+<b> Please note that according to the Community TA (David Hood - many thanks)  posting in the forum at (https://class.coursera.org/getdata-014/forum/thread?thread_id=31#comment-519) the actual list of columns chosen is not a marking criterion. In my opinion, not knowing the underlying data, it was best to chose all data columns that had mean/std/Mean in their column names, including some that were meanFreq etc.</b>
 
 *  Combine the subject, activity and measurements columns to create one Train Dataset as an R data frame.
 *  Combine the subject, activity and measurements columns to create one Test Dataset as an R data frame.
