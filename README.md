@@ -10,13 +10,16 @@ The raw original data (and descirptions of the data) for  this analysis  are avi
 
 
 
-R Script: 
-The run_analysis.R file is the only script required to repeatably perform the same summarization. The script requires the following libraries:
-* dplyr
+R Script:
+Dependencies/Pre-requisites for running the script:
 
+* The run_analysis.R file is the only script required to repeatably perform the same summarization. The script requires the following libraries:
+    * dplyr
+
+Other
 
 The script does the following :
-1) Requires/loads  pre-requisite R package
+*  Requires/loads  pre-requisite R package
 
 
 
